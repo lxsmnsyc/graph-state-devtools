@@ -1162,10 +1162,10 @@ graceful-fs@^4.1.2:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.4.tgz#2256bde14d3632958c465ebc96dc467ca07a29fb"
   integrity sha512-WjKPNJF79dtJAVniUlGGWHYGz2jWxT6VhN/4m1NdkbZ2nOsEF+cI1Edgql5zCRhs/VsQYRvrXctxktVXZUkixw==
 
-graph-state@0.6.1:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/graph-state/-/graph-state-0.6.1.tgz#27dd23dd4e14be859878028c98aea83ef7c4f523"
-  integrity sha512-dSKQYgOuS38ZJMfUDAPV269QM37MoF+IwhlNvBYy+bCMzEDO8dnZUE439CzV+IQLPZVTKHGzuiKAOzJWmsN2wA==
+graph-state@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/graph-state/-/graph-state-1.0.0.tgz#aaa369892d056c10ec3c035593ff303aa0a0f8d8"
+  integrity sha512-OX5C0ANy5qh6akVwqlvBbigCNXpkyeCydZo3rwkmMGm0ZieqMAtnT60oys2Rw9RdDsOz+ZNmqt3Ob1SbycFDtg==
 
 has-flag@^3.0.0:
   version "3.0.0"
@@ -1736,12 +1736,12 @@ react-dom@^16.13.1:
     prop-types "^15.6.2"
     scheduler "^0.19.1"
 
-react-graph-state@^0.8.3:
-  version "0.8.3"
-  resolved "https://registry.yarnpkg.com/react-graph-state/-/react-graph-state-0.8.3.tgz#8aa2d72532c2009251cd4568ee227073a13a927a"
-  integrity sha512-SbZqMpwl8Q7LSSB0UQbGN8py7aI73C1/J1r8YxLwZSUU/EM4IKPKv1++vRek65tWtAOj6lRYJb2X2prVhtRKKw==
+react-graph-state@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-graph-state/-/react-graph-state-1.0.0.tgz#4723cd33bd0e6e90e827ca6f09b47731865190c6"
+  integrity sha512-aMDDLJsaaIk0AhajJhTEMH/Sn/65nOlg9wbRoD+wlCTnHsPnNkOiAX5biuChdnoV3vCpgaVSbjf/U+18CrG+tA==
   dependencies:
-    use-dispose "^0.2.7"
+    use-dispose "^0.3.1"
 
 react-inspector@^5.1.0:
   version "5.1.0"
@@ -2106,10 +2106,10 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
-use-dispose@^0.2.7:
-  version "0.2.8"
-  resolved "https://registry.yarnpkg.com/use-dispose/-/use-dispose-0.2.8.tgz#6815e7d93100aad0937d9c13f923dd829cffdc6b"
-  integrity sha512-rjzAZUJo3ptVPojRJAb6YhgiyMoSmA7nTDgOMEflbxo+PMopY9sKHRLrzqkf4H3r3CM9JZnBimhEQc5qA57icA==
+use-dispose@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/use-dispose/-/use-dispose-0.3.1.tgz#09662abd99e00cd33b3d508e7fe9a6ff4bfea7c1"
+  integrity sha512-39iIjhAHoPMrdk/kqYqY7e6i9ddhFhU+eK81rDyfxt1MuotnhrnhA5Y5imojaxHUwdXq1NS4ejC2INy4SzE/kw==
 
 v8-compile-cache@^2.0.3:
   version "2.2.0"

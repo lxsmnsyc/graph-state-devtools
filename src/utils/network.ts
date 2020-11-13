@@ -14,7 +14,5 @@ export function selectNode(
   instance: Network,
   id: string,
 ): void {
-  if (instance.getSelectedNodes().indexOf(id) === -1) {
-    instance.selectNodes([id], true);
-  }
+  instance.selectNodes([id], true);
 }
