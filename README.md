@@ -2,8 +2,8 @@
 
 ## Install
 
-- Download [latest release ZIP](https://minhaskamal.github.io/DownGit/#/home?url=https:%2F%2Fgithub.com%2FLXSMNSYC%2Fscoped-model%2Ftree%2Fmaster%2Fpackages%2Fgraph-state-devtools)
-- Unpack ZIP
+- Download this repository as ZIP.
+- Unpack ZIP.
 - Go to `chrome://extensions/`, `Toggle Developer Mode` > `Load Unpacked`
 - Select folder of the unpacked ZIP
 
