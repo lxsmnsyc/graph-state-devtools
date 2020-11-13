@@ -1,0 +1,24 @@
+.Sidebar {
+  width: 100%;
+  height: 100vh;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.SidebarTabs {
+  margin: 16px 0px;
+  padding: 0px 16px;
+}
+
+.SidebarContentSection {
+  margin: 16px 0px;
+}
+
+@media screen and (max-width: 650px) {
+  .Sidebar {
+    height: auto;
+    overflow-y: auto;
+    overflow-x: auto;
+  }
+}
