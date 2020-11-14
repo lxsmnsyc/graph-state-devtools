@@ -17,14 +17,14 @@ export function formatEdge(
   const marked = new Set();
 
   memory.forEach((node) => {
-    node.dependents.forEach((dependent) => {
-      const id = formatEdgeId(node.id, dependent);
+    node.dependencies.forEach((dependency) => {
+      const id = formatEdgeId(node.id, dependency);
       marked.add(id);
 
       edges.update({
         id,
-        from: formatNodeId(node.id),
-        to: formatNodeId(dependent),
+        from: formatNodeId(dependency),
+        to: formatNodeId(node.id),
         arrows: 'to',
       });
     });
