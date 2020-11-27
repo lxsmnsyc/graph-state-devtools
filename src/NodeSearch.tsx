@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import {
   useGraphNodeValue,
   useGraphNodeDispatch,
@@ -27,6 +27,7 @@ function NodeSearchInput(): JSX.Element {
   const pending = initial.current && searchData.status === 'pending';
 
   const options = useRef<AutoCompleteOption[] | undefined>(undefined);
+  const [filtered, setFiltered] = useState<AutoCompleteOption[]>();
 
   if (searchData.status === 'success') {
     options.current = searchData.data;
@@ -38,12 +39,21 @@ function NodeSearchInput(): JSX.Element {
       searching={pending}
       disabled={pending}
       placeholder="Find node by label/id."
-      options={options.current}
+      options={filtered}
       onSelect={(value) => {
         setSelected({
           type: 'node',
           id: formatNodeId(value),
         });
+      }}
+      onSearch={(value) => {
+        if (!value) {
+          setFiltered(options.current);
+        } else {
+          setFiltered(options.current?.filter(
+            (item) => item.value.includes(value),
+          ));
+        }
       }}
     />
   );
