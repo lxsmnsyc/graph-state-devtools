@@ -5,8 +5,6 @@ import edges from './edges';
 import nodes from './nodes';
 import networkContainer from './network-container';
 import networkSelected from './network-selected';
-import { selectNode, moveNetworkViewToNode } from '../utils/network';
-import nodeSearchSelected from './node-search-selected';
 
 interface ClickEvent {
   edges: string[];
@@ -16,13 +14,11 @@ interface ClickEvent {
 const network = createGraphNode<Network | undefined>({
   get: ({ get, subscription, set }) => {
     const container = get(networkContainer);
-    const currentNodes = get(nodes);
-    const currentEdges = get(edges);
 
     if (container) {
       const instance = new Network(container, {
-        nodes: currentNodes,
-        edges: currentEdges,
+        nodes: get(nodes),
+        edges: get(edges),
       }, {
         nodes: {
           shape: 'dot',
@@ -41,15 +37,6 @@ const network = createGraphNode<Network | undefined>({
               type: 'node',
               id,
             });
-
-            const node = currentNodes.get(id);
-
-            if (node) {
-              set(nodeSearchSelected, node.label);
-            }
-
-            selectNode(instance, id);
-            moveNetworkViewToNode(instance, id);
           } else if (params.edges.length) {
             set(networkSelected, {
               type: 'edge',
