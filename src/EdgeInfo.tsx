@@ -12,14 +12,14 @@ interface EdgeLinkProps {
 }
 
 function EdgeLink({ title, type }: EdgeLinkProps): JSX.Element {
-  const selectedEdge = useGraphNodeValue(refreshedSelectedEdge);
+  const { edge } = useGraphNodeValue(refreshedSelectedEdge);
 
-  if (selectedEdge) {
+  if (edge) {
     return (
       <div className="SidebarContentSection">
         <Description
           title={title}
-          content={<NodeURL id={selectedEdge[type]} />}
+          content={<NodeURL id={edge[type]} />}
         />
       </div>
     );

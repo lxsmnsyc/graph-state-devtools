@@ -19,14 +19,14 @@ import nodes from './nodes/nodes';
 import StateViewer from './StateViewer';
 
 function NodeKey() {
-  const selectedNode = useGraphNodeValue(refreshedSelectedNode);
+  const { node } = useGraphNodeValue(refreshedSelectedNode);
 
-  if (selectedNode) {
+  if (node) {
     return (
       <div className="SidebarContentSection">
         <Description
           title="Graph Node Key"
-          content={selectedNode.label}
+          content={node.label}
         />
       </div>
     );
@@ -94,16 +94,16 @@ interface NodeLinksProps {
 }
 
 function NodeLinks({ title, type }: NodeLinksProps): JSX.Element {
-  const selectedNode = useGraphNodeValue(refreshedSelectedNode);
+  const { node } = useGraphNodeValue(refreshedSelectedNode);
 
-  if (selectedNode) {
+  if (node) {
     return (
       <div className="SidebarContentSection">
         <Description
           title={title}
           content={(
             <NodeURLList
-              ids={selectedNode[type]}
+              ids={node[type]}
             />
           )}
         />
@@ -115,14 +115,16 @@ function NodeLinks({ title, type }: NodeLinksProps): JSX.Element {
 }
 
 function NodeState(): JSX.Element {
-  const selectedNode = useGraphNodeValue(refreshedSelectedNode);
+  const { node } = useGraphNodeValue(refreshedSelectedNode);
 
-  if (selectedNode) {
+  console.log(node);
+
+  if (node) {
     return (
       <div className="SidebarContentSection">
         <Description
           title="State"
-          content={<StateViewer state={selectedNode.state} />}
+          content={<StateViewer state={node.state} />}
         />
       </div>
     );

@@ -1,13 +1,22 @@
 import { createGraphNode } from 'graph-state';
 
-import { DataNode } from './nodes';
-import networkSelectedNode from './network-selected-node';
+import nodes, { DataNode } from './nodes';
 import refresh from './refresh';
+import refreshEffect from './refresh-effect';
+import networkSelectedId from './network-selected-id';
 
-const refreshedSelectedNode = createGraphNode<DataNode | undefined>({
+interface RefreshedSelectedNode {
+  node?: DataNode;
+}
+
+const refreshedSelectedNode = createGraphNode<RefreshedSelectedNode>({
   get: ({ get }) => {
     get(refresh);
-    return get(networkSelectedNode);
+    get(refreshEffect);
+    const id = get(networkSelectedId);
+    return {
+      node: id ? get(nodes).get(id) ?? undefined : undefined,
+    };
   },
 });
 
