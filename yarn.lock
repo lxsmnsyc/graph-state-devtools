@@ -728,10 +728,10 @@ es-to-primitive@^1.2.1:
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
 
-esbuild@^0.8.5:
-  version "0.8.6"
-  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.8.6.tgz#ee44a116bb0066c605db20181bdc7c303b4f4fd6"
-  integrity sha512-JBN3gYqc6j/fX2s2zjwGoVbHGODFOIpzbRCSI9OM3rkvYuALqB91EUjoBW6uuwmiURPgH5IksJNN6ndTY778sw==
+esbuild@^0.8.21:
+  version "0.8.21"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.8.21.tgz#c431f8af457795c2fecb1b2873cb8eaef4e5b53c"
+  integrity sha512-vRRx5MZmiekw2R7jK5BppvBUFCJA0Zkl0wYxrDmyUvMPBcQC/xJvxJUM4R+Hgjgb3gp5P1W655AsuoqDeQQDVw==
 
 escalade@^3.1.1:
   version "3.1.1"
@@ -1205,10 +1205,10 @@ graceful-fs@^4.1.2:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.4.tgz#2256bde14d3632958c465ebc96dc467ca07a29fb"
   integrity sha512-WjKPNJF79dtJAVniUlGGWHYGz2jWxT6VhN/4m1NdkbZ2nOsEF+cI1Edgql5zCRhs/VsQYRvrXctxktVXZUkixw==
 
-graph-state@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/graph-state/-/graph-state-1.1.1.tgz#808a028b988d8734881a8cbff3206fd8ba65d9c6"
-  integrity sha512-0vjXzre13H2UTGMmm2c7ylMK6DnF0idDGbEiBmTN2ejxsJjhTKkWyHsoYfEOea4fihBm0DCAbwDiHKpIgYmzvw==
+graph-state@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/graph-state/-/graph-state-1.3.0.tgz#7aa9e3751f6bc43007e8dadda6eaf64a7f0ad385"
+  integrity sha512-caHXWIS/efi6n86YX8uhDogvyiKICBawZaclbejxfQNhiLOKhEbbP0g/vZh6UZOK2AWBA1QfQ1O2IGi8rX/uIQ==
 
 has-flag@^3.0.0:
   version "3.0.0"
@@ -1779,12 +1779,12 @@ react-dom@^16.13.1:
     prop-types "^15.6.2"
     scheduler "^0.19.1"
 
-react-graph-state@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/react-graph-state/-/react-graph-state-1.1.1.tgz#8937da602bd3eb3b33f97aed58e9a419852396ae"
-  integrity sha512-/3cIHGytZWVFjF/iFm+/uBOPTnR7GZgHbQoFMCql9MsGZe7uQe+QSnkvlr104/bTlLc1jAsxvIMgurXcqpiKHg==
+react-graph-state@^1.3.4:
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/react-graph-state/-/react-graph-state-1.3.4.tgz#2f6b3f9d39dc2734d21c516f67080a331ffbf6a8"
+  integrity sha512-B2vRE5Nt70ZZ2bAlMBO6ZXLFh93IGaRm4YZqQwqoAMeIo4q8n6uV6MG5iyzzXsUnUE6qcNVVb5cW7nOLONv6+w==
   dependencies:
-    use-dispose "^0.3.1"
+    use-dispose "^0.4.0"
 
 react-inspector@^5.1.0:
   version "5.1.0"
@@ -2149,10 +2149,10 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
-use-dispose@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/use-dispose/-/use-dispose-0.3.1.tgz#09662abd99e00cd33b3d508e7fe9a6ff4bfea7c1"
-  integrity sha512-39iIjhAHoPMrdk/kqYqY7e6i9ddhFhU+eK81rDyfxt1MuotnhrnhA5Y5imojaxHUwdXq1NS4ejC2INy4SzE/kw==
+use-dispose@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/use-dispose/-/use-dispose-0.4.0.tgz#795ab525dac4a75838ee5a661a4e7b5cee50bf88"
+  integrity sha512-eHSKynDFT8WD3bSCNsIlyWi74uYA+qUCz056guttm1htg2vgpuyMFDM29nzkpgts7Ej2EY+55J1x+itGOHMfOw==
 
 v8-compile-cache@^2.0.3:
   version "2.2.0"
