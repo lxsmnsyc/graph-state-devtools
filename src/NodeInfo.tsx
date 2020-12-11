@@ -117,8 +117,6 @@ function NodeLinks({ title, type }: NodeLinksProps): JSX.Element {
 function NodeState(): JSX.Element {
   const { node } = useGraphNodeValue(refreshedSelectedNode);
 
-  console.log(node);
-
   if (node) {
     return (
       <div className="SidebarContentSection">
