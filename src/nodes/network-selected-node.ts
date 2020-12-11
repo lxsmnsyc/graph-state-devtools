@@ -8,7 +8,7 @@ import nodeSearchSelected from './node-search-selected';
 import { moveNetworkViewToNode, selectNode } from '../utils/network';
 
 const networkSelectedNode = createGraphNode<string | undefined>({
-  get: ({ get, set }) => {
+  get: ({ get, set, subscription }) => {
     const selected = get(networkSelected);
 
     if (selected && selected.type === 'node') {
@@ -17,13 +17,29 @@ const networkSelectedNode = createGraphNode<string | undefined>({
       const value = currentNodes.get(selected.id);
 
       if (value) {
-        set(nodeSearchSelected, value.label);
+        subscription(() => {
+          const timeout = setTimeout(() => {
+            set(nodeSearchSelected, value.label);
+          });
+
+          return () => {
+            clearTimeout(timeout);
+          }
+        });
 
         const instance = get(network);
 
         if (instance) {
-          selectNode(instance, selected.id);
-          moveNetworkViewToNode(instance, selected.id);
+          subscription(() => {
+            const timeout = setTimeout(() => {
+              selectNode(instance, selected.id);
+              moveNetworkViewToNode(instance, selected.id);
+            });
+
+            return () => {
+              clearTimeout(timeout);
+            }
+          });
         }
 
         return selected.id;
