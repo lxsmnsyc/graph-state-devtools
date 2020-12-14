@@ -1205,10 +1205,10 @@ graceful-fs@^4.1.2:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.4.tgz#2256bde14d3632958c465ebc96dc467ca07a29fb"
   integrity sha512-WjKPNJF79dtJAVniUlGGWHYGz2jWxT6VhN/4m1NdkbZ2nOsEF+cI1Edgql5zCRhs/VsQYRvrXctxktVXZUkixw==
 
-graph-state@^1.3.5-alpha.3:
-  version "1.3.5-alpha.3"
-  resolved "https://registry.yarnpkg.com/graph-state/-/graph-state-1.3.5-alpha.3.tgz#9ea355e2c4ce42661f891169f39027284c231851"
-  integrity sha512-fThAqmKgQu9MEHFF+sIV6DArscjHNQx5P8ICL4Yo7dk7no0UghrvbOoy2JWfoXcrmUXG5xLP22qgKosnpslMoA==
+graph-state@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/graph-state/-/graph-state-1.4.1.tgz#6fe706a4e48e257664ab71fe0aeba13fa6d68719"
+  integrity sha512-s9w/Fk1SNI0wiN8A0R67fApXU3ZUsG0v5tGFlAiAChR6xjkhZKzszxpbtG/YIt4SS48rpw4tBf9cYHRZDHOS9A==
 
 has-flag@^3.0.0:
   version "3.0.0"
@@ -1779,10 +1779,10 @@ react-dom@^16.13.1:
     prop-types "^15.6.2"
     scheduler "^0.19.1"
 
-react-graph-state@^1.3.5-alpha.5:
-  version "1.3.5-alpha.5"
-  resolved "https://registry.yarnpkg.com/react-graph-state/-/react-graph-state-1.3.5-alpha.5.tgz#dde7159cbbd187af393b01902686d5c5146ba26f"
-  integrity sha512-mvjAIXdt3u54QeDuh872wi3cQ3KqSUdCyTSZE6ujDTIOSNkNcnLt1z+gTYsdsCGyzi8lIwBEdgV5EVt2MvHt0Q==
+react-graph-state@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/react-graph-state/-/react-graph-state-1.4.1.tgz#5c20db38cf301dbe6a68b29fb65c18b0151ac3fe"
+  integrity sha512-sfT2HcI1a3UBancYCh8QifwUKJNHWDeUP2QbhGa/eETi25vMSEdrah4HmU/NZhFQrv2zNX/adjzV0b/0AZvmJA==
   dependencies:
     use-dispose "^0.4.0"
 

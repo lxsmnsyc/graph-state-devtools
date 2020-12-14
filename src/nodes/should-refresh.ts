@@ -1,7 +1,7 @@
 import { createGraphNode } from 'graph-state';
 
 const shouldRefresh = createGraphNode<boolean>({
-  get: false,
+  get: true,
 });
 
 export default shouldRefresh;

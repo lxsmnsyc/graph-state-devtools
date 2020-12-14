@@ -1,7 +1,7 @@
 import { createGraphNode } from 'graph-state';
 
 const refreshInterval = createGraphNode({
-  get: 5000,
+  get: 100,
 });
 
 export default refreshInterval;
