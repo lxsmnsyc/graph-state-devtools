@@ -3,10 +3,10 @@ import shouldRefresh from './should-refresh';
 import refreshInterval from './refresh-interval';
 import shouldRefreshOnFocus from './should-refresh-on-focus';
 
-const refresh = createGraphNode<boolean>({
-  get: ({ get, mutateSelf, subscription }) => {
+const refresh = createGraphNode<number>({
+  get: ({ get, setSelf, subscription }) => {
     const revalidate = () => {
-      mutateSelf(true);
+      setSelf((current) => current + 1);
     };
 
     const refreshFlag = get(shouldRefresh);
@@ -35,7 +35,7 @@ const refresh = createGraphNode<boolean>({
       });
     }
 
-    return true;
+    return 0;
   },
 });
 
