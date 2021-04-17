@@ -1,6 +1,6 @@
-import { createGraphNode } from 'graph-state';
+import { node } from 'graph-state';
 
-const nodeSearchSelected = createGraphNode<string | undefined>({
+const nodeSearchSelected = node<string | undefined>({
   get: undefined,
 });
 

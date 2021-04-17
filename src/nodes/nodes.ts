@@ -1,4 +1,4 @@
-import { createGraphNode } from 'graph-state';
+import { node } from 'graph-state';
 import { DataSet } from 'vis-data';
 
 export interface DataNode {
@@ -10,7 +10,7 @@ export interface DataNode {
   state?: any;
 }
 
-const nodes = createGraphNode({
+const nodes = node({
   get: new DataSet<DataNode>([]),
 });
 

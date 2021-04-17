@@ -6,15 +6,14 @@
     "prepublish": "yarn build"
   },
   "dependencies": {
-    "@geist-ui/react": "^2.1.0-canary.2",
+    "@geist-ui/react": "^2.1.5",
     "@geist-ui/react-icons": "^1.0.1",
     "@types/react-inspector": "^4.0.1",
-    "esbuild": "^0.9.5",
-    "graph-state": "^1.5.0",
+    "graph-state": "^2.0.0",
     "normalize.css": "^8.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-graph-state": "^1.5.0",
+    "react-graph-state": "^2.0.0",
     "react-inspector": "^5.1.0",
     "vis-data": "^7.1.0",
     "vis-network": "^8.5.2"
@@ -24,7 +23,8 @@
     "@types/react-dom": "^16.9.9",
     "eslint": "^7.14.0",
     "eslint-config-lxsmnsyc": "^0.1.19",
-    "typescript": "^4.1.2"
+    "typescript": "^4.1.2",
+    "esbuild": "^0.11.12"
   },
   "private": true,
   "description": "Graph State DevTools",

@@ -9,7 +9,7 @@ import './AppContainer.css';
 
 export default function AppContainer(): JSX.Element {
   return (
-    <GeistProvider theme={{ type: 'dark' }}>
+    <GeistProvider themeType="dark">
       <CssBaseline />
       <AppTitle />
       <div className="AppContainer">

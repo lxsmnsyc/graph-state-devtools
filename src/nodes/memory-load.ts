@@ -1,6 +1,6 @@
 import {
-  createGraphNode,
-  createGraphNodeResource,
+  node,
+  resource,
   GraphNodeDebugData,
 } from 'graph-state';
 
@@ -12,7 +12,7 @@ import readMemory from '../utils/read-memory';
 import { formatEdge } from '../utils/format-edge';
 import { formatNode } from '../utils/format-node';
 
-const memoryLoad = createGraphNode<Promise<GraphNodeDebugData[]>>({
+const memoryLoad = node<Promise<GraphNodeDebugData[]>>({
   get: async ({ get }) => {
     get(refresh);
 
@@ -25,6 +25,6 @@ const memoryLoad = createGraphNode<Promise<GraphNodeDebugData[]>>({
   },
 });
 
-export const memoryResource = createGraphNodeResource(memoryLoad);
+export const memoryResource = resource(memoryLoad);
 
 export default memoryLoad;

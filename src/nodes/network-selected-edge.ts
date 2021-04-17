@@ -1,9 +1,9 @@
-import { createGraphNode } from 'graph-state';
+import { node } from 'graph-state';
 
 import edges from './edges';
 import networkSelected from './network-selected';
 
-const networkSelectedEdge = createGraphNode<string | undefined>({
+const networkSelectedEdge = node<string | undefined>({
   get: ({ get }) => {
     const selected = get(networkSelected);
 

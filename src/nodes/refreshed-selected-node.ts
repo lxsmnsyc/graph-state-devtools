@@ -1,4 +1,4 @@
-import { createGraphNode } from 'graph-state';
+import { node } from 'graph-state';
 
 import nodes, { DataNode } from './nodes';
 import refresh from './refresh';
@@ -8,7 +8,7 @@ interface RefreshedSelectedNode {
   node?: DataNode;
 }
 
-const refreshedSelectedNode = createGraphNode<RefreshedSelectedNode>({
+const refreshedSelectedNode = node<RefreshedSelectedNode>({
   get: ({ get }) => {
     get(refresh);
     const id = get(networkSelectedNode);

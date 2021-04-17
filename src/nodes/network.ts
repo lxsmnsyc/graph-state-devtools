@@ -1,4 +1,4 @@
-import { createGraphNode } from 'graph-state';
+import { node } from 'graph-state';
 import { Network } from 'vis-network/standalone/esm';
 
 import edges from './edges';
@@ -11,7 +11,7 @@ interface ClickEvent {
   nodes: string[];
 }
 
-const network = createGraphNode<Network | undefined>({
+const network = node<Network | undefined>({
   get: ({ get, subscription, set }) => {
     const container = get(networkContainer);
 

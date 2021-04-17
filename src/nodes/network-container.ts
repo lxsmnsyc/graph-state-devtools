@@ -1,6 +1,6 @@
-import { createGraphNode } from 'graph-state';
+import { node } from 'graph-state';
 
-const networkContainer = createGraphNode<HTMLDivElement | null>({
+const networkContainer = node<HTMLDivElement | null>({
   get: null,
 });
 

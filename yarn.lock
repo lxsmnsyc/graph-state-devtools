@@ -138,17 +138,17 @@
   resolved "https://registry.yarnpkg.com/@geist-ui/react-icons/-/react-icons-1.0.1.tgz#5da112bbc98216bf05da3aabbd7d21594440b209"
   integrity sha512-/phre1NwXT0Mrxcq3yb+KksJ16/ykptgxI7+jh5pmDZfxnIMPlBWFBGDK0yw96oi752Wuo24X6+tkWjVe/g5Bg==
 
-"@geist-ui/react@^2.1.0-canary.2":
-  version "2.1.0-canary.2"
-  resolved "https://registry.yarnpkg.com/@geist-ui/react/-/react-2.1.0-canary.2.tgz#cc90f193bd41c99e880413cda2dd867d43ef0063"
-  integrity sha512-w5MHkeU6IE8H3NRYnOwQ2b/OtFHcvIEKkXliYeBwbK0upm1GAmxwjlaQliOyzahmyUOScJb/Lgu8cHY/SmwZjw==
+"@geist-ui/react@^2.1.5":
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/@geist-ui/react/-/react-2.1.5.tgz#26532eb1869a97c60c36a3860cba184bdab59f55"
+  integrity sha512-vHn3yOAyXon88m6UnaU9e16iC5U0hFwYbwlroD05dbx4GbH/f5uRhmQ5QI4nkTvVi3/m0++cLGR2ek9U8WY6hg==
   dependencies:
-    styled-jsx "^3.2.5"
+    styled-jsx "3.3.0"
 
-"@lyonph/react-hooks@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@lyonph/react-hooks/-/react-hooks-0.3.0.tgz#f4d00f1643dd839412eb111114cecaa657a53a68"
-  integrity sha512-PB/QqCE9hqNWHuy2eTSNrSWxW3euybZBc6B7FGWA4VKTG3zFqo6CiVXkcw7nrFi/BwA4hsSD7rzbR06ir9s6FQ==
+"@lyonph/react-hooks@^0.3.3", "@lyonph/react-hooks@^0.3.4", "@lyonph/react-hooks@^0.3.5":
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/@lyonph/react-hooks/-/react-hooks-0.3.5.tgz#625dded79e6ac6c1a051d0f8eb4a64d427b57610"
+  integrity sha512-/6Scp7fo9zSNlUJ8ASvLbrx1FnlyhD2K5RImkiBLx6BCkNDSziZsY+9iRuHNuIZVZFbiCnxH8StpbO73WCmmmQ==
 
 "@next/eslint-plugin-next@^9.5.5":
   version "9.5.5"
@@ -733,10 +733,10 @@ es-to-primitive@^1.2.1:
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
 
-esbuild@^0.9.5:
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.9.5.tgz#200e7836580c0a78849ee257656efd40dbf0b4df"
-  integrity sha512-ZBOtZX9HxgSdwkAroVifEUgylWqbOjqbu1i1ohRvhoaYt6aj81dxbizODx419gwDAupqut44ehFVwUq7WRN/OA==
+esbuild@^0.11.12:
+  version "0.11.12"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.11.12.tgz#8cbe15bcb44212624c3e77c896a835f74dc71c3c"
+  integrity sha512-c8cso/1RwVj+fbDvLtUgSG4ZJQ0y9Zdrl6Ot/GAjyy4pdMCHaFnDMts5gqFnWRPLajWtEnI+3hlET4R9fVoZng==
 
 escalade@^3.1.1:
   version "3.1.1"
@@ -1210,10 +1210,10 @@ graceful-fs@^4.1.2:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.4.tgz#2256bde14d3632958c465ebc96dc467ca07a29fb"
   integrity sha512-WjKPNJF79dtJAVniUlGGWHYGz2jWxT6VhN/4m1NdkbZ2nOsEF+cI1Edgql5zCRhs/VsQYRvrXctxktVXZUkixw==
 
-graph-state@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/graph-state/-/graph-state-1.5.0.tgz#6804d71c50b1f873694053b265138ba9bd8f7f7e"
-  integrity sha512-QquqCPIpLq971Zv+gud1xzJkfjxu4jfSpp0aEUr2HbT3SGn8OQPTEkgl7qeTSKC0lpEbcesDNPx6BS/B3SZeKw==
+graph-state@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/graph-state/-/graph-state-2.0.0.tgz#42abd214f27e0b1f7cf04b555af602b877105680"
+  integrity sha512-uqr9rO4A52B6xKRlal6Pv3gIJ+TvfjU2hFohetluqrSLSCRG7/do6I4/pcxJjQA7O0V7wHyipvIneRuisAYX2g==
 
 has-flag@^3.0.0:
   version "3.0.0"
@@ -1784,13 +1784,14 @@ react-dom@^16.13.1:
     prop-types "^15.6.2"
     scheduler "^0.19.1"
 
-react-graph-state@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/react-graph-state/-/react-graph-state-1.5.0.tgz#855730531fb34b725f76afe5556af3c54d1ed638"
-  integrity sha512-NxASuqaeCxSxmqNv5Q82DQohlX3s2E0NCxhMKM9oqFWMM7dZQ7aEyQinL5xHjXGNzVQ3eJZ9604BP0ZrmQkLvg==
+react-graph-state@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-graph-state/-/react-graph-state-2.0.0.tgz#c2ba45e1cc370ed99d38a700c5351f175fd00c70"
+  integrity sha512-FguPFMk7Fx3yogKT/Xzqt15VMEiLWfVp2F15eyamx2Jy3J9wLL8NuSJjs8/OhuB3/m4P5cAmXdhT0s5YWpk2NA==
   dependencies:
-    "@lyonph/react-hooks" "^0.3.0"
-    use-dispose "^0.5.0"
+    "@lyonph/react-hooks" "^0.3.3"
+    react-scoped-model "^2.0.2"
+    react-store-adapter "^0.3.1"
 
 react-inspector@^5.1.0:
   version "5.1.0"
@@ -1805,6 +1806,21 @@ react-is@^16.8.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-scoped-model@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/react-scoped-model/-/react-scoped-model-2.0.2.tgz#286d1283efbd99be57eba8f11827204145bf46af"
+  integrity sha512-UBZ7qNue3A7RZvfAd4lviilJj1mEA33HEElLfxDoIH5jyNyTx7jVB2APmYG4lgQyMJ7sE5Ih6QTc3jC8My928w==
+  dependencies:
+    "@lyonph/react-hooks" "^0.3.5"
+
+react-store-adapter@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/react-store-adapter/-/react-store-adapter-0.3.1.tgz#55850baf83ea4d6e89cd5cd1b79e12c0c82ab8c6"
+  integrity sha512-P9l1lpaXJc8uFbYG11xHkxaZa3LCWCVKLsGn/jTmCnt9E3a6JhyIU3irDCP3b6bGS3V8orwE3AtOktyLEDZ+fg==
+  dependencies:
+    "@lyonph/react-hooks" "^0.3.4"
+    react-scoped-model "^2.0.2"
 
 react@^16.13.1:
   version "16.14.0"
@@ -2044,10 +2060,10 @@ strip-json-comments@^3.1.0, strip-json-comments@^3.1.1:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-3.1.1.tgz#31f1281b3832630434831c310c01cccda8cbe006"
   integrity sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==
 
-styled-jsx@^3.2.5:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/styled-jsx/-/styled-jsx-3.3.1.tgz#d79f306c42c99cefbe8e76f35dad8100dc5c9ecc"
-  integrity sha512-RhW71t3k95E3g7Zq3lEBk+kmf+p4ZME7c5tfsYf9M5mq6CgIvFXkbvhawL2gWriXLRlMyKAYACE89Qa2JnTqUw==
+styled-jsx@3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/styled-jsx/-/styled-jsx-3.3.0.tgz#32335c1a3ecfc923ba4f9c056eeb3d4699006b09"
+  integrity sha512-sh8BI5eGKyJlwL4kNXHjb27/a/GJV8wP4ElRIkRXrGW3sHKOsY9Pa1VZRNxyvf3+lisdPwizD9JDkzVO9uGwZw==
   dependencies:
     "@babel/types" "7.8.3"
     babel-plugin-syntax-jsx "6.18.0"
@@ -2154,11 +2170,6 @@ uri-js@^4.2.2:
   integrity sha512-B0yRTzYdUCCn9n+F4+Gh4yIDtMQcaJsmYBDsTSG8g/OejKBodLQ2IHfN3bM7jUsRXndopT7OIXWdYqc1fjmV6g==
   dependencies:
     punycode "^2.1.0"
-
-use-dispose@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/use-dispose/-/use-dispose-0.5.0.tgz#b221da22246b3c88d7d7aaafd2500f53312eba6e"
-  integrity sha512-QPz5TuxdDMtALFT7LT2Ia987/j4TB4yDCBkZCFuht0XUalN8Vp7lIhXhkw/YyDmuEHHGVXQKBexnT+yE4bHObA==
 
 v8-compile-cache@^2.0.3:
   version "2.2.0"

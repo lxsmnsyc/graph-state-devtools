@@ -1,6 +1,6 @@
-import { createGraphNode } from 'graph-state';
+import { node } from 'graph-state';
 
-const shouldRefresh = createGraphNode<boolean>({
+const shouldRefresh = node<boolean>({
   get: true,
 });
 

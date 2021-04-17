@@ -1,9 +1,9 @@
-import { createGraphNode } from 'graph-state';
+import { node } from 'graph-state';
 import shouldRefresh from './should-refresh';
 import refreshInterval from './refresh-interval';
 import shouldRefreshOnFocus from './should-refresh-on-focus';
 
-const refresh = createGraphNode<number>({
+const refresh = node<number>({
   get: ({ get, setSelf, subscription }) => {
     const revalidate = () => {
       setSelf((current) => current + 1);

@@ -1,11 +1,11 @@
-import { createGraphNode } from 'graph-state';
+import { node } from 'graph-state';
 
 export interface NetworkSelected {
   type: 'node' | 'edge';
   id: string;
 }
 
-const networkSelected = createGraphNode<NetworkSelected | null>({
+const networkSelected = node<NetworkSelected | null>({
   get: null,
 });
 

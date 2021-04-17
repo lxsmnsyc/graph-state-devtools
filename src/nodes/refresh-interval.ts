@@ -1,6 +1,6 @@
-import { createGraphNode } from 'graph-state';
+import { node } from 'graph-state';
 
-const refreshInterval = createGraphNode({
+const refreshInterval = node({
   get: 100,
 });
 

@@ -1,4 +1,4 @@
-import { createGraphNode } from 'graph-state';
+import { node } from 'graph-state';
 import nodes from './nodes';
 
 import network from './network';
@@ -7,7 +7,7 @@ import nodeSearchSelected from './node-search-selected';
 
 import { moveNetworkViewToNode, selectNode } from '../utils/network';
 
-const networkSelectedNode = createGraphNode<string | undefined>({
+const networkSelectedNode = node<string | undefined>({
   get: ({ get, set, subscription }) => {
     const selected = get(networkSelected);
 
