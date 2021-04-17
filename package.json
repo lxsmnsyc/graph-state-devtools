@@ -1,6 +1,6 @@
 {
   "name": "graph-state-devtools",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "scripts": {
     "build": "node build.js",
     "prepublish": "yarn build"
