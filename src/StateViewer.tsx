@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactJson from 'react-json-view';
+import superjson from 'superjson';
 
 import './StateViewer.css';
 
@@ -13,7 +14,7 @@ export default function StateViewer({ state }: StateViewerProps): JSX.Element {
       <ReactJson
         theme="bright"
         src={{
-          state,
+          state: superjson.serialize(state).json,
         }}
         indentWidth={2}
         name={null}
