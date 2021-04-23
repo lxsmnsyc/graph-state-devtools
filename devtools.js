@@ -8,7 +8,6 @@ function init() {
       document.addEventListener('__GRAPH_STATE__', (event) => {
         const { type, data } = event.detail;
 
-        console.log(type, data);
         switch (type) {
           case 'MEMORY':
             store.set(data, new Map());

@@ -27,7 +27,7 @@ function MemorySearchInput(): JSX.Element {
       value={selected}
       searching={!searchData}
       disabled={!searchData}
-      placeholder="Find node by label/id."
+      placeholder="Find memory by key"
       options={filtered}
       onSelect={(value) => {
         setSelected(value);

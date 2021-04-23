@@ -23,6 +23,7 @@ export function formatNode(
       ...node,
       dependencies: node.dependencies.map(formatNodeId),
       dependents: node.dependents.map(formatNodeId),
+      listeners: node.listeners,
       id,
     });
   });

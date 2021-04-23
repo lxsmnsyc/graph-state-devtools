@@ -130,11 +130,30 @@ function NodeState(): JSX.Element {
 
   return <></>;
 }
+
+function NodeListeners(): JSX.Element {
+  const { node } = useGraphNodeValue(refreshedSelectedNode);
+
+  if (node) {
+    return (
+      <div className="SidebarContentSection">
+        <Description
+          title="Listeners"
+          content={node.listeners}
+        />
+      </div>
+    );
+  }
+
+  return <></>;
+}
+
 export default function NodeInfo(): JSX.Element {
   return (
     <>
       <NodeKey />
       <NodeState />
+      <NodeListeners />
       <NodeLinks title="Dependencies" type="dependencies" />
       <NodeLinks title="Dependents" type="dependents" />
     </>

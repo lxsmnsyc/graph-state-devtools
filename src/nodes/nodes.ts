@@ -8,6 +8,7 @@ export interface DataNode {
   dependencies: string[];
   dependents: string[];
   state?: any;
+  listeners: number;
 }
 
 const nodes = node({
