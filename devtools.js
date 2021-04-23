@@ -16,7 +16,6 @@ function init() {
           case 'NODE':
             const currentMemory = store.get(data.memory) || new Map();
             currentMemory.set(data.key, data.data);
-            console.log(currentMemory);
             store.set(data.memory, currentMemory);
             break;
         }

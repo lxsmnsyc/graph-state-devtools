@@ -37,7 +37,6 @@ export function formatNode(
 export function formatNodeAutoComplete(
   memory: GraphNodeDebugTuple[],
 ): AutoCompleteOption[] {
-  console.log(memory);
   return memory.map(([key]) => ({
     label: `${key}`,
     value: `${key}`,
