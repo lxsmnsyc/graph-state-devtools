@@ -1,7 +1,8 @@
 import { AutoCompleteOption } from '@geist-ui/react/dist/auto-complete/auto-complete';
-import { GraphNodeKey, GraphNodeDebugData } from 'graph-state';
+import { GraphNodeKey } from 'graph-state';
 import { DataSet } from 'vis-data';
 import { DataNode } from '../nodes/nodes';
+import { GraphNodeDebugTuple } from './read-memory';
 
 export function formatNodeId(id: GraphNodeKey): string {
   return `GraphNode(id: ${id})`;
@@ -9,15 +10,15 @@ export function formatNodeId(id: GraphNodeKey): string {
 
 export function formatNode(
   nodes: DataSet<DataNode>,
-  memory: GraphNodeDebugData[],
+  memory: GraphNodeDebugTuple[],
 ): void {
   const marked = new Set();
-  memory.forEach((node) => {
-    const id = formatNodeId(node.id);
+  memory.forEach(([key, node]) => {
+    const id = formatNodeId(key);
     marked.add(id);
 
     nodes.update({
-      label: `${node.id}`,
+      label: `${key}`,
       value: node.dependencies.length + 1,
       ...node,
       dependencies: node.dependencies.map(formatNodeId),
@@ -34,10 +35,20 @@ export function formatNode(
 }
 
 export function formatNodeAutoComplete(
-  memory: GraphNodeDebugData[],
+  memory: GraphNodeDebugTuple[],
 ): AutoCompleteOption[] {
-  return memory.map((node) => ({
-    label: `${node.id}`,
-    value: `${node.id}`,
+  console.log(memory);
+  return memory.map(([key]) => ({
+    label: `${key}`,
+    value: `${key}`,
+  }));
+}
+
+export function formatMemoryAutoComplete(
+  memory: string[],
+): AutoCompleteOption[] {
+  return memory.map((key) => ({
+    label: `${key}`,
+    value: `${key}`,
   }));
 }

@@ -1,30 +1,25 @@
-import {
-  node,
-  resource,
-  GraphNodeDebugData,
-} from 'graph-state';
+import { node, ResourceResult } from 'graph-state';
 
-import refresh from './refresh';
 import nodes from './nodes';
 import edges from './edges';
 
-import readMemory from '../utils/read-memory';
+import { GraphNodeDebugTuple } from '../utils/read-memory';
 import { formatEdge } from '../utils/format-edge';
 import { formatNode } from '../utils/format-node';
+import selectedMemoryData from './selected-memory-data';
 
-const memoryLoad = node<Promise<GraphNodeDebugData[]>>({
-  get: async ({ get }) => {
-    get(refresh);
+const memoryLoad = node<ResourceResult<GraphNodeDebugTuple[]>>({
+  key: 'memoryLoad',
+  get: (context) => {
+    const currentMemory = context.get(selectedMemoryData.resource);
 
-    const memory = await readMemory();
+    if (currentMemory.status === 'success') {
+      formatNode(context.get(nodes), currentMemory.data);
+      formatEdge(context.get(edges), currentMemory.data);
+    }
 
-    formatNode(get(nodes), memory);
-    formatEdge(get(edges), memory);
-
-    return memory;
+    return currentMemory;
   },
 });
-
-export const memoryResource = resource(memoryLoad);
 
 export default memoryLoad;

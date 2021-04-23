@@ -24,7 +24,7 @@ const networkSelectedNode = node<string | undefined>({
 
           return () => {
             clearTimeout(timeout);
-          }
+          };
         });
 
         const instance = get(network);
@@ -38,7 +38,7 @@ const networkSelectedNode = node<string | undefined>({
 
             return () => {
               clearTimeout(timeout);
-            }
+            };
           });
         }
 

@@ -1,7 +1,5 @@
 import React from 'react';
-import Inspector from 'react-inspector';
-
-import theme from './utils/state-viewer-theme';
+import ReactJson from 'react-json-view';
 
 import './StateViewer.css';
 
@@ -12,9 +10,13 @@ interface StateViewerProps {
 export default function StateViewer({ state }: StateViewerProps): JSX.Element {
   return (
     <div className="StateViewer">
-      <Inspector
-        theme={theme}
-        data={state}
+      <ReactJson
+        theme="bright"
+        src={{
+          state,
+        }}
+        indentWidth={2}
+        name={null}
       />
     </div>
   );

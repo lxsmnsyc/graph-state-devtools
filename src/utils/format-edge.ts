@@ -1,7 +1,8 @@
-import { GraphNodeKey, GraphNodeDebugData } from 'graph-state';
+import { GraphNodeKey } from 'graph-state';
 import { DataSet } from 'vis-data';
 import { DataEdge } from '../nodes/edges';
 import { formatNodeId } from './format-node';
+import { GraphNodeDebugTuple } from './read-memory';
 
 export function formatEdgeId(
   from: GraphNodeKey,
@@ -12,13 +13,13 @@ export function formatEdgeId(
 
 export function formatEdge(
   edges: DataSet<DataEdge>,
-  memory: GraphNodeDebugData[],
+  memory: GraphNodeDebugTuple[],
 ): void {
   const marked = new Set();
 
-  memory.forEach((node) => {
+  memory.forEach(([key, node]) => {
     node.dependents.forEach((dependency) => {
-      const id = formatEdgeId(node.id, dependency);
+      const id = formatEdgeId(key, dependency);
       marked.add(id);
 
       // edges.update({
@@ -29,7 +30,7 @@ export function formatEdge(
       // });
       edges.update({
         id,
-        from: formatNodeId(node.id),
+        from: formatNodeId(key),
         to: formatNodeId(dependency),
         arrows: 'to',
       });
