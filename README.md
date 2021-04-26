@@ -1,5 +1,5 @@
 # graph-state-devtools
-![image](https://user-images.githubusercontent.com/4783372/115860202-c0e6c980-a463-11eb-834b-1b6b07bf9941.png)
+![image](https://user-images.githubusercontent.com/4783372/116092797-b2edae80-a6d8-11eb-9d82-66ba722a8725.png)
 
 ## Install
 
