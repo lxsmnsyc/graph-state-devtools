@@ -1,11 +1,14 @@
-.SettingsField {
+.Settings {
+  width: 100%;
+
   display: flex;
+  flex-direction: column;
 }
 
-.SettingsFieldLabel {
-  margin: 0px 16px;
+.SettingsSection {
+  margin: 0.75rem;
 }
 
-.SettingsSectionContent {
-  margin: 16px 16px 0px;
+.SettingsLabel {
+  margin-left: 0.75rem;
 }

@@ -1,24 +1,16 @@
 import React from 'react';
 import ReactJson from 'react-json-view';
 import superjson from 'superjson';
+import Inspector from './Inspector';
 
-import './StateViewer.css';
-
-interface StateViewerProps {
-  state?: any;
+interface StateViewerProps<T> {
+  state: T;
 }
 
-export default function StateViewer({ state }: StateViewerProps): JSX.Element {
+export default function StateViewer<T>({ state }: StateViewerProps<T>): JSX.Element {
   return (
     <div className="StateViewer">
-      <ReactJson
-        theme="bright"
-        src={{
-          state: superjson.serialize(state).json,
-        }}
-        indentWidth={2}
-        name={null}
-      />
+      <Inspector data={state} />
     </div>
   );
 }

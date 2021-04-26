@@ -20,7 +20,7 @@ function MemorySearchInput(): JSX.Element {
   const searchData = useGraphNodeValue(memorySearchData);
   const [selected, setSelected] = useGraphNodeState(memorySearchSelected);
 
-  const [filtered, setFiltered] = useState<AutoCompleteOption[]>();
+  const [filtered, setFiltered] = useState<AutoCompleteOption[]>(searchData || []);
 
   return (
     <AutoComplete
@@ -34,11 +34,11 @@ function MemorySearchInput(): JSX.Element {
       }}
       onSearch={(value) => {
         if (!value) {
-          setFiltered(searchData);
+          setFiltered(searchData ?? []);
         } else {
           setFiltered(searchData?.filter(
             (item) => item.value.includes(value),
-          ));
+          ) ?? []);
         }
       }}
     />
@@ -50,7 +50,7 @@ function NodeSearchInput(): JSX.Element {
   const selected = useGraphNodeValue(nodeSearchSelected);
   const setSelected = useGraphNodeDispatch(networkSelected);
 
-  const [filtered, setFiltered] = useState<AutoCompleteOption[]>();
+  const [filtered, setFiltered] = useState<AutoCompleteOption[]>(searchData ?? []);
 
   return (
     <AutoComplete
@@ -67,11 +67,11 @@ function NodeSearchInput(): JSX.Element {
       }}
       onSearch={(value) => {
         if (!value) {
-          setFiltered(searchData);
+          setFiltered(searchData ?? []);
         } else {
           setFiltered(searchData?.filter(
             (item) => item.value.includes(value),
-          ));
+          ) ?? []);
         }
       }}
     />

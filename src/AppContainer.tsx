@@ -3,7 +3,8 @@ import { GeistProvider, CssBaseline } from '@geist-ui/react';
 
 import NetworkVisualizer from './NetworkVisualizer';
 import Sidebar from './Sidebar';
-import AppTitle from './AppTitle';
+
+import { EcmasonViewSettings } from './models/EcmasonViewSettings';
 
 import './AppContainer.css';
 
@@ -11,11 +12,12 @@ export default function AppContainer(): JSX.Element {
   return (
     <GeistProvider themeType="dark">
       <CssBaseline />
-      <AppTitle />
-      <div className="AppContainer">
-        <NetworkVisualizer />
-        <Sidebar />
-      </div>
+      <EcmasonViewSettings.Provider>
+        <div className="AppContainer">
+          <NetworkVisualizer />
+          <Sidebar />
+        </div>
+      </EcmasonViewSettings.Provider>
     </GeistProvider>
   );
 }

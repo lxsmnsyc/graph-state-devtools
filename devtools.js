@@ -2,20 +2,22 @@ function init() {
   chrome.devtools.inspectedWindow.eval(
     `
     (() => {
-      const store = new Map();
-      window.__GRAPH_STATE__ = store;
-      console.log('__GRAPH_STATE__');
       document.addEventListener('__GRAPH_STATE__', (event) => {
         const { type, data } = event.detail;
 
+        if (!window.__GRAPH_STATE__) {
+          console.log('__GRAPH_STATE__');
+          window.__GRAPH_STATE__ = new Map();
+        }
+
         switch (type) {
           case 'MEMORY':
-            store.set(data, new Map());
+            window.__GRAPH_STATE__.set(data, new Map());
             break;
           case 'NODE':
-            const currentMemory = store.get(data.memory) || new Map();
+            const currentMemory = window.__GRAPH_STATE__.get(data.memory) || new Map();
             currentMemory.set(data.key, data.data);
-            store.set(data.memory, currentMemory);
+            window.__GRAPH_STATE__.set(data.memory, currentMemory);
             break;
         }
       });

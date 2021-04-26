@@ -1,12 +1,12 @@
 
 .NetworkVisualizerContainer {
-  width: 60vmax;
+  width: 50vmax;
   height: 100vmin;
   display: grid;
 }
 
 .NetworkVisualizer {
-  width: 60vmax;
+  width: 50vmax;
   height: 100vmin;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
@@ -54,8 +54,10 @@
 @media screen and (max-width: 650px) {
   .NetworkVisualizerContainer {
     width: 100vmin;
+    height: 50vh;
   }
   .NetworkVisualizer {
     width: 100vmin;
+    height: 50vh;
   }
 }

@@ -1,16 +1,41 @@
 import { GraphNodeKey } from 'graph-state';
-import superjson from 'superjson';
+import { addTransformer, parse, withRecursionTracker } from 'ecmason';
 
-superjson.registerCustom<string, string>({
-  isApplicable: (v): v is string => typeof v === 'string',
-  serialize: (v) => v,
-  deserialize: (v) => v,
-}, 'function');
-superjson.registerCustom<string, string>({
-  isApplicable: (v): v is string => typeof v === 'string',
-  serialize: (v) => v,
-  deserialize: (v) => v,
-}, 'promise');
+addTransformer<Promise<any>, null>('object', {
+  tag: 'PROMISE',
+  check: (value): value is Promise<any> => value instanceof Promise,
+  serialize: () => null,
+  deserialize: () => Promise.resolve(),
+});
+addTransformer<(...args: any[]) => any, string>('primitive', {
+  tag: 'FUNCTION',
+  check: (v): v is ((...args: any[]) => any) => typeof v === 'function',
+  serialize: (v) => `ƒ ${v.name} () { }`,
+  deserialize: (v) => {
+    const newFunc = () => { /* noop */ };
+    newFunc.name = v;
+    return newFunc;
+  },
+});
+
+interface ErrorECMASon {
+  name: string;
+  message: string;
+}
+
+addTransformer('object', withRecursionTracker<Error, ErrorECMASon>({
+  tag: 'ERROR',
+  check: (v): v is Error => v instanceof Error,
+  serialize: (v) => ({
+    name: v.name,
+    message: v.message,
+  }),
+  deserialize: (v) => {
+    const error = new Error(v.message);
+    error.name = v.name;
+    return error;
+  },
+}));
 
 interface ChromeInspectedWindow {
   eval: <T>(key: string, result: (data: T, exception: Error) => void) => void;
@@ -75,7 +100,7 @@ export function getMemoryData(memory: string): Promise<GraphNodeDebugTuple[]> {
         } else {
           resolve(result.map(([key, value]) => ([
             key,
-            superjson.parse(value),
+            parse(value),
           ])));
         }
       },

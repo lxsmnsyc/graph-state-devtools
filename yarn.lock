@@ -500,6 +500,11 @@ balanced-match@^1.0.0:
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
   integrity sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
 
+base16-ts@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/base16-ts/-/base16-ts-0.2.0.tgz#af100b5bd62325cf4e3dba604a785029eee39376"
+  integrity sha512-kZUp3CjkOT/Wlsm23HbBHW8HdmtraF3GXspCIUl2gldYCMjhTWRz6TJNS9sc7M3vJfx5Yqp4n9A1sCczSGlCEA==
+
 base16@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/base16/-/base16-1.0.0.tgz#e297f60d7ec1014a7a971a39ebc8a98c0b681e70"
@@ -666,6 +671,11 @@ csstype@^3.0.2:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.0.5.tgz#7fdec6a28a67ae18647c51668a9ff95bb2fa7bb8"
   integrity sha512-uVDi8LpBUKQj6sdxNaTetL6FpeCqTjOvAQuQUa/qAqq8oOd4ivkbhgnqayl0dnPal8Tb/yB1tF+gOvCBiicaiQ==
 
+cxs@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/cxs/-/cxs-6.2.0.tgz#f11ca3bdaef154b93bdadca5df70f2cb3e37ca24"
+  integrity sha512-RGatb1BUwVMBzV8DRo9Kapc55bdGfAxMcukVk+ZzE3Ts8xaTve0GVz730kBDxjhEBU2LK+RPuAcjZb00Q3O24w==
+
 damerau-levenshtein@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/damerau-levenshtein/-/damerau-levenshtein-1.0.6.tgz#143c1641cb3d85c60c32329e26899adea8701791"
@@ -737,6 +747,11 @@ doctrine@^3.0.0:
   integrity sha512-yS+Q5i3hBf7GBkd4KG8a7eBNNWNGLTaEwwYWUijIYM7zrlYDM0BFXHjjPWlWZ1Rg7UaddZeIDmi9jF3HmqiQ2w==
   dependencies:
     esutils "^2.0.2"
+
+ecmason@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/ecmason/-/ecmason-0.1.3.tgz#e86493105f1441f2ab9a94e0c7a62b5ff26fb15d"
+  integrity sha512-SQeo9Q0m6w37/TUTddLWcKBCEwY2nPiITQDIODV34t+yGb9xgk+MsN84a/Y1G7nKNmAU7+mkarPXwr15yUZ3RQ==
 
 electron-to-chromium@^1.3.591:
   version "1.3.595"
@@ -2073,6 +2088,16 @@ react-dom@^16.13.1:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
     scheduler "^0.19.1"
+
+react-ecmason-view@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/react-ecmason-view/-/react-ecmason-view-0.2.0.tgz#8289d6d676fdec334f61fd37c9e7e6c7b4ece210"
+  integrity sha512-Kkdh29W4JLtb67Bv5W91eqpKUcJPBsKqjQ11OXRYhGqGW97ewxfCaYQPiRxswDONabIKHA5OeDRNm56S0zOPQA==
+  dependencies:
+    "@lyonph/react-hooks" "^0.3.5"
+    cxs "^6.2.0"
+    ecmason "^0.1.3"
+    react-scoped-model "^2.0.2"
 
 react-graph-state@^2.0.0:
   version "2.0.0"

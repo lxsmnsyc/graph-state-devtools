@@ -3,7 +3,6 @@
   height: 100vh;
 
   overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 .SidebarTabs {
@@ -17,8 +16,6 @@
 
 @media screen and (max-width: 650px) {
   .Sidebar {
-    height: auto;
-    overflow-y: auto;
-    overflow-x: auto;
+    height: 50vh;
   }
 }
