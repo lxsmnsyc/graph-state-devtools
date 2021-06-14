@@ -11,5 +11,6 @@ esbuild.buildSync({
   minify: true,
   platform: 'browser',
   outfile: './out/index.js',
-  target: 'es2017'
+  target: 'es2017',
+  sourcemap: true,
 });

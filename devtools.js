@@ -6,7 +6,6 @@ function init() {
         const { type, data } = event.detail;
 
         if (!window.__GRAPH_STATE__) {
-          console.log('__GRAPH_STATE__');
           window.__GRAPH_STATE__ = new Map();
         }
 
@@ -15,6 +14,7 @@ function init() {
             window.__GRAPH_STATE__.set(data, new Map());
             break;
           case 'NODE':
+            console.log(data);
             const currentMemory = window.__GRAPH_STATE__.get(data.memory) || new Map();
             currentMemory.set(data.key, data.data);
             window.__GRAPH_STATE__.set(data.memory, currentMemory);
